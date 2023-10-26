@@ -1,9 +1,15 @@
-import Circle from "./Circle";
-import Circles from "./Circles";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Outlet } from "react-router-dom";
+import NavHeader from "./components/NavHeader";
 
 function App() {
-  return <Circles />;
+  return (
+    <div>
+      <NavHeader />
+      <Outlet></Outlet>
+    </div>
+  );
 }
 
 export default App;
