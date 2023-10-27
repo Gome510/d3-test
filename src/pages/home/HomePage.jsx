@@ -1,7 +1,17 @@
 import React from "react";
+import DashboardPreview from "../../components/DashboardPreview";
+import ExamplesGrid from "../../components/ExamplesGrid";
+import { Container } from "react-bootstrap";
+
+//TODO: github pages, own examples, hide dashboard preview
 
 function HomePage() {
-  return <div className="d-flex flex-md-column p-2"></div>;
+  return (
+    <Container>
+      <DashboardPreview />
+      <ExamplesGrid />
+    </Container>
+  );
 }
 
 export default HomePage;
