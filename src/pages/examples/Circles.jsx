@@ -16,7 +16,7 @@ function Circles() {
   }, 2000);
 
   return (
-    <svg viewBox="0 0 100 50">
+    <svg viewBox="0 0 100 50" className="bg-black">
       {dataset.map(([x, y], i) => (
         <circle cx={x} cy={y} r="3" fill="white" />
       ))}

@@ -3,25 +3,33 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
+import "./NavHeader.css";
 
 function NavHeader() {
+  const examples = ["circle", "circles", "enter-exit"];
+  const exampleLinks = examples.map((link) => (
+    <NavDropdown.Item key={link}>
+      <Link to={`/${link}`} className="link-unstyled">
+        {link}
+      </Link>
+    </NavDropdown.Item>
+  ));
   return (
     <Navbar expand="md" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand>D3 & Me</Navbar.Brand>
+      <Container className="">
+        <Navbar.Brand>
+          <Link to="/" className="link-unstyled">
+            D3 & Me
+          </Link>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className=" d-flex align-items-center">
-            <Link to="/">
-              <Nav.Link>Home</Nav.Link>
+          <Nav className=" d-flex align-items-center ">
+            <Link to="/dashboard" className="link-unstyled">
+              Dashboard
             </Link>
-            <Nav.Link>Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item>Action</NavDropdown.Item>
-              <NavDropdown.Item>Another action</NavDropdown.Item>
-              <NavDropdown.Item>Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item>Separated link</NavDropdown.Item>
+            <NavDropdown title="Examples" id="basic-nav-dropdown">
+              {exampleLinks}
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

@@ -1,0 +1,7 @@
+.link-unstyled,
+.link-unstyled:link,
+.link-unstyled:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
+/* https://stackoverflow.com/questions/22429881/how-to-unstyle-anchor-when-using-bootstrap */

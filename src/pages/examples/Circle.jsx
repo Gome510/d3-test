@@ -1,10 +1,9 @@
-import React, { useEffect, useRef } from "react";
-import * as d3 from "d3";
+import React from "react";
 
 function Circle() {
   return (
-    <svg>
-      <circle cx="150" cy="77" r="40" />
+    <svg className="bg-black" viewBox="0 0 100 50">
+      <circle cx="50" cy="25" r="20" fill="white" />
     </svg>
   );
 }
