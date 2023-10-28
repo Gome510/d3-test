@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Circle",
+    "url": "/circle",
+    "thumbnail": "/src/assets/images/circle.png"
+  },
+  {
+    "name": "Circles",
+    "url": "/circles",
+    "thumbnail": "/src/assets/images/circles.png"
+  },
+  {
+    "name": "Enter & Exit",
+    "url": "/enter-exit",
+    "thumbnail": "/src/assets/images/enter-exit.png"
+  }
+]

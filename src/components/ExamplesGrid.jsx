@@ -1,35 +1,32 @@
 import React from "react";
 import { Row, Col, Card, Button } from "react-bootstrap";
-import data from "/public/assets/data/examples.json";
+import data from "/src/assets/data/examples.json";
+import { Link } from "react-router-dom";
 //FIXME: examples.json to update example grid
 
-function ExamplesGrid({ count }) {
+function ExamplesGrid() {
   return (
     <Row xs={1} md={2} lg={3} xl={4} className="g-4">
-      {Array(4)
-        .fill(0)
-        .map((_, id) => (
-          <ExampleCard key={id} />
-        ))}
+      {data.map((exampleData, id) => (
+        <ExampleCard key={id} data={exampleData} />
+      ))}
     </Row>
   );
 }
 
 export default ExamplesGrid;
 
-function ExampleCard() {
+function ExampleCard({ data }) {
   return (
-    <Col>
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
-        <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-        </Card.Body>
-      </Card>
-    </Col>
+    <Link to={data.url} className="link-unstyled">
+      <Col>
+        <Card style={{ width: "18rem" }}>
+          <Card.Img variant="top" src={data.thumbnail} />
+          <Card.Body>
+            <Card.Title>{data.name}</Card.Title>
+          </Card.Body>
+        </Card>
+      </Col>
+    </Link>
   );
 }
