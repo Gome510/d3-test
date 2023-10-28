@@ -2,16 +2,16 @@
   {
     "name": "Circle",
     "url": "/circle",
-    "thumbnail": "/assets/images/circle.png"
+    "thumbnail": "assets/images/circle.png"
   },
   {
     "name": "Circles",
     "url": "/circles",
-    "thumbnail": "/assets/images/circles.png"
+    "thumbnail": "assets/images/circles.png"
   },
   {
     "name": "Enter & Exit",
     "url": "/enter-exit",
-    "thumbnail": "/assets/images/enter-exit.png"
+    "thumbnail": "assets/images/enter-exit.png"
   }
 ]
