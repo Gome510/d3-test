@@ -6,11 +6,22 @@ import { Link } from "react-router-dom";
 
 function ExamplesGrid() {
   return (
-    <Row xs={1} md={2} lg={3} xl={4} className="g-4">
-      {data.map((exampleData, id) => (
-        <ExampleCard key={id} data={exampleData} />
-      ))}
-    </Row>
+    <>
+      <h2 className="mb-0">React Examples</h2>
+      <p>
+        <em>
+          Courtesy of{" "}
+          <a href="https://2019.wattenberger.com/blog/react-and-d3">
+            Amelia Wattenberger
+          </a>
+        </em>
+      </p>
+      <Row xs={1} md={2} lg={3} xl={4} className="g-4">
+        {data.map((exampleData, id) => (
+          <ExampleCard key={id} data={exampleData} />
+        ))}
+      </Row>
+    </>
   );
 }
 

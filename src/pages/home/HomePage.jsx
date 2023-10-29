@@ -8,7 +8,6 @@ import { Container } from "react-bootstrap";
 function HomePage() {
   return (
     <Container>
-      <DashboardPreview />
       <ExamplesGrid />
     </Container>
   );

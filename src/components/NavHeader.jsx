@@ -25,9 +25,11 @@ function NavHeader() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className=" d-flex align-items-center ">
-            <Link to="/dashboard" className="link-unstyled">
-              Dashboard
-            </Link>
+            {false && (
+              <Link to="/dashboard" className="link-unstyled">
+                Dashboard
+              </Link>
+            )}
             <NavDropdown title="Examples" id="basic-nav-dropdown">
               {exampleLinks}
             </NavDropdown>
